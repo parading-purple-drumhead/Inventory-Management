@@ -1,0 +1,5 @@
+body{
+    background: url(../images/college.jpg) center no-repeat;
+    background-size: cover;
+    background-color: rgba(red, green, blue, 0.5);
+}

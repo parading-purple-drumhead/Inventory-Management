@@ -1,0 +1,136 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management System</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- Navbar  -->
+    <nav class="blue darken-3">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">Inventory Management</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a id="nav-username">Username</a></li>
+                <li><a id="logout-btn" href="#">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Add item modal -->
+    <div class="modal" id="add-modal" style="border-radius: 0.5rem;">
+        <div class="modal-content center-align container">
+            <h4>Add a new product</h4>
+            <form id="add-product-form">
+                <div class="input-field">
+                    <input type="text" name="p-name" id="pa-name">
+                    <label for="p-name">Product Name</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" name="p-quantity" id="pa-quantity">
+                    <label for="p-quantity">Quantity</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" name="p-room" id="pa-room">
+                    <label for="p-room">Room No.</label>
+                </div>
+            </form>
+            <a id="add_btn" href="#" class="btn green white-text modal-close">Add Product</a>
+        </div>
+    </div>
+
+    <!-- Edit item modal -->
+    <div class="modal" id="edit-modal" style="border-radius: 0.5rem;">
+        <div class="modal-content center-align container">
+            <h4>Edit product details</h4>
+            <form id="edit-product-form">
+                <div class="input-field">
+                    <input type="text" name="p-id" id="pe-id" disabled>
+                    <label class="active" for="p-id">Product ID</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" name="p-name" id="pe-name">
+                    <label class="active" for="p-name">Product Name</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" name="p-quantity" id="pe-quantity">
+                    <label class="active" for="p-quantity">Quantity</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" name="p-room" id="pe-room">
+                    <label class="active" for="p-room">Room No.</label>
+                </div>
+            </form>
+            <a href="#" id="update-btn" class="btn green white-text modal-close">Update Product</a>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- Search bar -->
+        <div class="row" style="margin-top: 1rem;margin-bottom: 0;">
+            <div class="col l2 input-field">
+                <a href="#add-modal" class="btn blue waves-effect waves-light modal-trigger" style="width: 100%;">
+                    Add Product
+                </a>
+            </div>
+            <div class="col l3 offset-l7 input-field">
+                <i class="material-icons prefix">search</i>
+                <input type="text" name="search" id="search">
+                <label for="search">Search</label>
+            </div>
+        </div>
+
+        <!-- Table heading -->
+        <div class="row blue darken-3 white-text center-align"
+            style="line-height: 3rem;font-size: 1.5rem; border-radius: 0.5rem; margin-top: 0rem;margin-bottom: 0;">
+            <span class="col l2">Product ID</span>
+            <span class="col l4">Product Name</span>
+            <span class="col l2">Quantity</span>
+            <span class="col l2">Room No.</span>
+        </div>
+
+        <!-- Product table -->
+        <div id="prod-table" style="max-height: 30rem;overflow-y: scroll;">
+            <!-- <div class="row center-align" style="margin: 1rem 0rem 1rem;">
+                <span class="col l2">Id 1</span>
+                <span class="col l4">Product 1</span>
+                <span class="col l2">50</span>
+                <span class="col l2">UB201</span>
+                <span class="col l2">
+                    <a href="#edit-modal"
+                        class="btn-floating btn-small blue modal-trigger waves-effect waves-light z-depth-0">
+                        <i class="material-icons">mode_edit</i>
+                    </a>
+                    <a class="btn-floating btn-small red waves-effect waves-light z-depth-0">
+                        <i class="material-icons">delete</i>
+                    </a>
+                </span>
+            </div>
+            <hr style="width: 98%;"> -->
+        </div>
+        <!-- <div id="no-prod" class="grey-text" style="padding-left: 25rem;margin-top: 10rem;font-size: 2.5rem;"><i>No products found</i></div> -->
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.fixed-action-btn').floatingActionButton();
+            $('.modal').modal();
+        });
+    </script>
+</body>
+
+</html>

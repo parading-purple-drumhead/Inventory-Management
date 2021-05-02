@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col l8 offset-l2" style="padding-top: 15rem;">
+                <div class="card center-align" style="border-radius: 0.5rem;background-color: rgba(255,255,255,0.9);">
+                    <div class="card-content container black-text">
+                        <div class="card-title">Login</div>
+                        <form id="login-form">
+                            <div class="input-field">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="l-email">
+                            </div>
+                            <div class="input-field">
+                                <label for="password">Password</label>
+                                <input type="password" name="password" id="l-password">
+                            </div>
+                            <span class="red-text" id="error"></span><br><br>
+                            <a href="#" id="login-btn" class="btn btn-small blue z-depth-0">Login</a>
+                        </form>
+                        <span>Don't have an account? <a href="signup.html">Sign Up</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>
